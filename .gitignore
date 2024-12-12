@@ -1,0 +1,10 @@
+# Ignore all files in `config` directory
+config/*
+
+# Ignore os-specific files
+.DS_Store
+*/.DS_Store
+Thumbs.db
+*/Thumbs.db
+Desktop.ini
+*/Desktop.ini

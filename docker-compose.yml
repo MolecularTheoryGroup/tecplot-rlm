@@ -1,0 +1,17 @@
+services:
+  tecplot-rlm:
+    container_name: tecplot-rlm
+    build:
+      context: /path/to/tecplot-rlm/build
+      dockerfile: Dockerfile
+    network_mode: bridge
+    hostname: tecplot-rlm
+    ports: # host-port:container-port (change first numbers to avoid conflicts if necessary)
+      - "5053:5053"
+      - "5054:5054" # RLM web interface
+      - "27100:27100" # RLM license server
+      - "27101:27101" # RLM license server (can add more for multiple licenses)
+    environment:
+      - TZ=America/Denver # Set timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+    volumes:
+      - /path/to/tecplot-rlm/config:/etc/rlm
