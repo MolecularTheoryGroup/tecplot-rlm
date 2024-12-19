@@ -1,0 +1,13 @@
+# Ignore all files in `config` directory
+config/*
+
+# Ignore the rlm install script: get a copy by logging into my.tecplot.com -> Product Releases -> RLM
+build/rlm*.sh
+
+# Ignore os-specific files
+.DS_Store
+*/.DS_Store
+Thumbs.db
+*/Thumbs.db
+Desktop.ini
+*/Desktop.ini
